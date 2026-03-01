@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+/*
+Programa que simula os movimentos da Torre, Bispo,
+Rainha e Cavalo usando for, while e do-while.
+*/
+
+int main() {
+
+    int movimentosTorre = 5;
+    int movimentosBispo = 5;
+    int movimentosRainha = 8;
+    int movimentosCavaloBaixo = 2;
+    int movimentosCavaloEsquerda = 1;
+
+    int i;
+
+    // Torre - 5 casas para a direita (for)
+    printf("Movimento da Torre:\n");
+    for (i = 0; i < movimentosTorre; i++) {
+        printf("Direita\n");
+    }
+
+    // Bispo - 5 casas na diagonal (while)
+    printf("\nMovimento do Bispo:\n");
+    i = 0;
+    while (i < movimentosBispo) {
+        printf("Cima Direita\n");
+        i++;
+    }
+
+    // Rainha - 8 casas para a esquerda (do-while)
+    printf("\nMovimento da Rainha:\n");
+    i = 0;
+    do {
+        printf("Esquerda\n");
+        i++;
+    } while (i < movimentosRainha);
+
+    // Cavalo - 2 para baixo e 1 para esquerda
+    printf("\nMovimento do Cavalo:\n");
+
+    for (i = 0; i < movimentosCavaloBaixo; i++) {
+        printf("Baixo\n");
+    }
+
+    i = 0;
+    while (i < movimentosCavaloEsquerda) {
+        printf("Esquerda\n");
+        i++;
+    }
+
+    return 0;
+}
